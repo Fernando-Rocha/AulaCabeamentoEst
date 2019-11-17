@@ -110,7 +110,7 @@ onecolumn]{scrartcl}	 					% KOMA-article class
 	\thispagestyle{empty}		% Enabling the custom headers/footers for the first page 
 	
 	\initial{E}\textbf{ste projeto tem como propósito apresentar uma estrutura de cabeamento para uma empresa fictícia, consolidando assim o conhecimento adquirido na disciplina de cabeamento estruturado.
-		O resumo será descrito no formato texto e em forma de um mapa mental/conceitual conforme figura \ref{fig4}.}
+		O resumo será descrito no formato texto e em forma de um mapa mental/conceitual conforme figura \ref{fig54}.}
 	
 	
 	\begin{figure}
@@ -180,7 +180,7 @@ onecolumn]{scrartcl}	 					% KOMA-article class
 	\end{itemize}	
 	
 	\section{Usuários e Aplicativos}
-	Atualmente a empresa tem como usuários seus 25 colaboradores mais seus clientes que fazem uso da rede wireless. Com a crescente demanda por serviços este número pode aumentar nos próximos anos, por isso é importante que o projeto preveja uma possível expansão da rede atual.
+	Atualmente a empresa tem como usuários seus 25 colaboradores mais seus clientes, que fazem uso da rede wireless. Com a crescente demanda por serviços este número pode aumentar nos próximos anos, por isso é importante que o projeto preveja uma possível expansão da rede atual.
 	
 	
 	\subsection{Usuários}
@@ -195,7 +195,7 @@ onecolumn]{scrartcl}	 					% KOMA-article class
 	\begin{itemize}
 		\item Sistema ERP: 3;
 		\item Pacote Office: 9;
-		\item Programa de Vendas: 4;
+		\item Sistema de Vendas: 4;
 	\end{itemize}
 	
 	\section{Estrutura predial existente}
@@ -229,18 +229,42 @@ onecolumn]{scrartcl}	 					% KOMA-article class
 	Deve ter a planta atual, se for o caso
 	
 	\subsection{Topologia}
+	
 	Proposta futura, proposta após implantação.
 	Deve conter o diagrama da rede. Atente-se a redundância  e ligações truncadas.
-	Deve explicar todos termos e componentes utilizados nestas plantas. Por exemplo: entrance facility, work area, horizontal cabling, etc..
-	
+	Deve explicar todos termos e componentes utilizados nestas plantas. Por exemplo: entrance facility, work area, horizontal cabling, etc.. \ref{fig2}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\textwidth]{fig2}
+		\caption{Planta Lógica}
+		\label{fig2}
+	\end{figure}	
 	Todos os elementos das figuras devem ser explicados. 
 	Crie esboço da configuração dos racks e brackets. Explique cada um dos componentes. Você pode criar uma tabela contendo figuras dentro, ou criar uma tabela e incluí-la como imagem. Por exemplo, verifique a tabela \ref{tab1}.
 	
 	\input{tab1}
 	
 	\subsection{Encaminhamento}
-	Eletrodutos, calhas, e qualquer material em que os cabos serão alojados/alocados.
+	Os cabos seguirão em eletrocalhas sob o piso elevado.
+	%inicio dos comandos para criar uma nova pagina A3 horizontal
+	\clearpage
+	\KOMAoptions{paper=a3, paper=landscape, DIV=20}
+	\recalctypearea
 	
+	\begin{figure}
+		%	\centering
+		\noindent\makebox[\textwidth][c]{
+			\includegraphics[width=\textwidth]{fig3}
+		}
+		\caption{Encaminhamento}
+		\label{fig3}
+	\end{figure}
+	
+	%Retornar ao formato A4
+	\clearpage
+	\KOMAoptions{paper=a4, paper=portrait, DIV=calc}
+	\recalctypearea
+	%-- reinicio em A4 
 	\subsection{Memorial descritivo}
 	
 	Relacione todos os equipamentos passivos que serão utilizados, tipo, fabricante, quantidade.
@@ -335,32 +359,32 @@ onecolumn]{scrartcl}	 					% KOMA-article class
 	
 	\subsection{Figuras}
 	
-	As figuras podem ser no formato PDF, JPG, PNG. Você pode referenciá-las da mesma maneira que tabelas. Exemplo: A figura \ref{fig6} apresenta.....
+	As figuras podem ser no formato PDF, JPG, PNG. Você pode referenciá-las da mesma maneira que tabelas. Exemplo: A figura \ref{fig56} apresenta.....
 	
 	Não se preocupe o local em que a figura será renderizada em seu texto. Preocupe-se em criar referência para ela, ou seja, toda figura e tabela deve conter pelo menos uma referência no texto.
 	
 	\begin{figure}
 		\centering
-		\includegraphics[width=\textwidth]{fig6}
+		\includegraphics[width=\textwidth]{fig56}
 		\caption{Exemplo de figura com escala horizontal}
-		\label{fig6}
+		\label{fig56}
 	\end{figure}
 	
 	
 	\begin{figure}
 		\centering
-		\includegraphics[]{fig2}
+		\includegraphics[]{fig52}
 		\caption{Exemplo de figura sem escala}
-		\label{fig2}
+		\label{fig52}
 	\end{figure}
 	
 	Você pode rotacionar figuras também. Para isso utilize o parâmetro angle=-90. Repare que a escala da figura foi modificada pelo parametro height. Você também pode utilizar scale
 	
 	\begin{figure}
 		\centering
-		\includegraphics[height=\textwidth,angle=-90]{fig3}
+		\includegraphics[height=\textwidth,angle=-90]{fig53}
 		\caption{Exemplo de figura rotacionada}
-		\label{fig3}
+		\label{fig53}
 	\end{figure}
 	
 	\subsubsection{Resumo gráfico}
@@ -368,13 +392,13 @@ onecolumn]{scrartcl}	 					% KOMA-article class
 	Você pode optar por fazer um resumo no formato de mapa mental/conceitual. 
 	Aqui foi utilizado o site https://app.mindmup.com para gerar o mapa.
 	
-	Para utilizar o resumo gráfico, remova o texto da seção resumo (linha 137) e inclua o código para inserir a figura, conforme figura \ref{fig4}
+	Para utilizar o resumo gráfico, remova o texto da seção resumo (linha 137) e inclua o código para inserir a figura, conforme figura \ref{fig54}
 	
 	\begin{figure}[h]
 		\centering
-		\includegraphics[width=\textwidth,height=5cm,keepaspectratio]{fig4}
+		\includegraphics[width=\textwidth,height=5cm,keepaspectratio]{fig54}
 		\caption{Exemplo de resumo gráfico}
-		\label{fig4}	
+		\label{fig54}	
 	\end{figure}
 	
 	%% ***********************************************************************
