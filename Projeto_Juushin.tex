@@ -10,7 +10,7 @@ paper=a4,%
 fontsize=12pt,%
 onecolumn]{scrartcl}	 					% KOMA-article class
 \usepackage{multicol}							%Texto em duas colunas
-\usepackage{lipsum}													% Package to create dummy text
+\usepackage{lipsum}			\usepackage{booktabs}										% Package to create dummy text
 \usepackage[brazil]{babel}										% English language/hyphenation
 \usepackage[protrusion=true,expansion=true]{microtype}				% Better typography
 \usepackage{amsmath,amsfonts,amsthm}					% Math packages
@@ -109,7 +109,7 @@ onecolumn]{scrartcl}	 					% KOMA-article class
 	\thispagestyle{fancy} 	
 	\thispagestyle{empty}		% Enabling the custom headers/footers for the first page 
 	
-	\initial{E}\textbf{ste projeto tem como propósito apresentar uma estrutura de cabeamento para uma empresa fictícia, consolidando assim o conhecimento adquirido na disciplina de cabeamento estruturado.}
+	\initial{O}\textbf{ presente documento tem como propósito colocar em prática o aprendizado da disciplina de cabeamento estruturado, criando uma estrutura de rede para uma empresa fictícia com base nas normas técnicas nacionais e internacionais, assim como as melhores práticas do seguimento.}
 	
 	
 	\begin{figure}
@@ -141,7 +141,7 @@ onecolumn]{scrartcl}	 					% KOMA-article class
 	
 	\subsection{Benefícios}
 	
-	O planejamento de um sistema de cabeamento traz consideráveis benefícios às empresas que o adotam, dentre eles:
+	O planejamento de um sistema de cabeamento traz vários benefícios às empresas que o adotam, dentre eles:
 	\begin{itemize}
 		\item Unifica a estrutura de dados, voz e vídeo reduzindo custos com manutenção e necessidade de atualização.
 		\item Menor propensão a falhas, interrupções e interferências.
@@ -154,15 +154,15 @@ onecolumn]{scrartcl}	 					% KOMA-article class
 		\centering
 		\caption{Organizações}
 		\label{tab1} %com este label vc faz referencia no texto
-		\begin{tabular}{|l|l|l|l|l|l|}
-			\hline
-			\multicolumn{1}{|c|}{\textbf{Empresa}} & 
-			\multicolumn{1}{c|}{\textbf{Serviço}} & 
-			\multicolumn{1}{c|}{\textbf{Responsável}} \\ \hline
-			Copel Telecom  & Provedor de Internet          & Mévio \\ \hline		
-			BH Construtora & Piso e Instalação das calhas  & Caio\\ \hline
-			VyperNET       & montagem Racks e cabos        & Tício \\ \hline
-			Certfik       & Certificação do Cabeamento     & Plinio \\ \hline
+		\begin{tabular}{llllll}
+			\toprule
+			{\textbf{EMPRESA}} & {\textbf{SERVIÇO}} & {\textbf{RESPONSÁVEL}} \\
+			\midrule 
+			Copel Telecom  & Provedor de Internet          & Mévio \\ 		
+			BH Construtora & Piso e Instalação das calhas  & Caio\\ 
+			VyperNET       & Montagem Racks e cabos        & Tício \\ 
+			Certfik       & Certificação do Cabeamento     & Plinio \\
+			\bottomrule
 		\end{tabular}
 	\end{table}
 	
@@ -240,16 +240,15 @@ onecolumn]{scrartcl}	 					% KOMA-article class
 		A planta da nova sede conta com uma sala de recepção com $ 32,95m^{2}  $ e 4 pontos de rede com espaçamento de 2 metros; quatro salas administrativas com aprox. $ 30m^{2}  $ e 5 pontos de rede com espaçamento de 2 metros; uma sala de diretores com $ 48m^{2}  $ e 6 pontos de rede com espaçamento de 2 metros; uma sala para reuniões com $ 46,78m^{2}  $ e 8 pontos de rede com espaçamento de 2 metros;  3 banheiros e uma sala de arquivos com $ 31,37m^{2}  $ e 4 pontos de rede com espaçamento de 2 metros, onde se encontra a sala de equipamentos.
 		
 		\begin{figure}[h]
-			\centering
-			
+			\centering	
 			\includegraphics[width=\textwidth]{fig2}
 			\caption{Planta Lógica}
 			\label{fig2}
 		\end{figure}
 	
 	\subsection{Encaminhamento}
-	Os cabos seguirão em eletrocalhas sob o piso elevado e sairão por eletrodutos até as tomadas, localizadas a 0,45m acima do piso.A Eletrocalha "A", identificada no projeto com a cor azul, conterá o cabeamento da sala 1, sala 2 e sala da diretoria, totalizando 14 cabos.
-	A eletrocalha "B", identificada no projeto com a cor vermelha, conterá o cabeamento da sala 3, sala 4 e sala de reuniões.	A eletrocalha "C", identificada no projeto com a cor verde, conterá o cabeamento da sala de arquivos, recepção, sala 3, sala 4 e sala de reuniões. 
+	Os cabos seguirão em eletrocalhas sob o piso elevado e sairão por eletrodutos até as tomadas, localizadas a 0,45m acima do piso. A Eletrocalha "A", identificada no projeto com a cor azul, conterá o cabeamento da sala 1, sala 2 e sala da diretoria, totalizando 14 cabos, conforme NBR 16415 \cite{ref1}.
+	A eletrocalha "B", identificada no projeto com a cor vermelha, conterá o cabeamento da sala 3, sala 4 e sala de reuniões.	A eletrocalha "C", de cor verde, conterá o cabeamento da sala de arquivos, recepção, sala 3, sala 4 e sala de reuniões. 
 	
 	
 	%inicio dos comandos para criar uma nova pagina A3 horizontal
@@ -274,27 +273,36 @@ onecolumn]{scrartcl}	 					% KOMA-article class
 	\subsection{Memorial descritivo}
 	
 \begin{table}[h!]
+	\footnotesize
 	\centering
 	\caption{Componentes Utilizados}
 	\label{tab2} %com este label vc faz referencia no texto
-	\begin{tabular}{|l|l|l|}
-		\hline
-		Componentes                                   & Quantidade & Fabricante      \\ \hline
-		Abraçadeira Nylon 2,5 x 100mm c/100			       & 5          & Western         \\ \hline
-		Cabo De Rede Furukawa Cat6 U/utp 305m     		   & 3          & Furukawa        \\ \hline
-		Kit 10U Cx+tampa + 1 Tomada Rj45 Cat6              & 5          & Tramontina      \\ \hline
-		Patch Cord Cat6 1,5m Gigalan Furukawa              & 50         & Furukawa        \\ \hline
-		Patch Cord Cat6 2,5m Gigalan Furukawa              & 20         & Furukawa        \\ \hline
-		Patch Panel Cat.6 48 Posições                      & 1          & Itcomtech        \\ \hline
-		Rack 44 U                                          & 1          & CWB Metal		  \\ \hline
-		Régua tomadas Com 12 Tomadas Bivolt 			   & 1          & Ipec            \\ \hline
-		Switch 48 portas                                   & 1          & HP              \\ \hline
+	\begin{tabular}{lll}
+		\toprule
+		{\textbf{COMPONENTE}} & {\textbf{FABRICANTE}} & {\textbf{QUANTIDADE}} \\
+		\midrule
+		Abraçadeira Nylon 2,5 x 100mm c/100   & Western    & 5          \\
+		Cabo De Rede Cat6 U/utp 305m          & Furukawa   & 3          \\
+		Conector Rj45 Cat6 (pacote C/50)      & Furukawa   & 2         \\
+		Eletrocalha 50x50 3m                  & Cemar      & 63         \\
+		Eletrocalha Curva Horiz 90 50x50      & Cemar      & 8          \\
+		Eletrocalha Te 90 50x50               & Cemar      & 4          \\
+		Eletroduto Em Pvc c/ 3 Metros         & Tigre      & 7          \\
+		Kit Cx+tampa+Tomada Rj45 Cat.6 10u    & Tramontina & 5          \\
+		Patch Cord Cat6 1,5m Gigalan vermelho & Furukawa   & 50         \\
+		Patch Cord Cat6 2,5m Gigalan vermelho & Furukawa   & 20         \\
+		Patch Panel Cat.6 48 Posições         & Itcomtech  & 1          \\
+		Rack para Servidor Fechado 44U        & Inforack   & 1          \\
+		Régua tomadas c/ 12 Tomadas Bivolt    & Ipec       & 1          \\
+		Roteador AC DIR-815                   & D-Link     & 2          \\
+		Switch 48 portas                      & HP         & 1          \\
+		\toprule
 	\end{tabular}
 \end{table}
 	
 	\subsection{Identificação dos cabos}
 
-	De acordo com a norma ANSI/EIA/TIA - 606, cada unidade de terminação deve ter uma identificação exclusiva, conforme a norma ANSI/EIA/TIA - 606. Deste modo a identificação dos cabos seguirá o seguinte padrão:
+	De acordo com Pinheiro \cite{ref2}, cada unidade de terminação de hardware deve ter uma identificação exclusiva, conforme estabelece a norma ANSI/EIA/TIA - 606. Deste modo a identificação dos cabos seguirá o seguinte padrão:
 	
 	\subitem Txx - Ponto de comunicação
 	\subitem W - Calha
@@ -314,61 +322,64 @@ onecolumn]{scrartcl}	 					% KOMA-article class
 	\end{figure}
 	A figura \ref{fig4} indica o cabo 01, que liga a porta 1 do Patch Panel ao Ponto de Telecomunicações 01, passando pela calha A no primeiro Andar. O tipo de cabo usado é UTP.
 \clearpage	
-\begin{table}[h]\footnotesize
+\begin{table}[h]
+	\footnotesize
 	\centering
-	\caption{Pontos}	
+	\caption{Pontos de rede}	
 	\label{tab3} %com este label vc faz referencia no texto
-		\begin{tabular}{|l|l|l|l|l|}
-			\hline
-			PONTO DE COMUNICAÇÃO & CALHA & PORTA & Nº CABO & DIST (M)    \\ \hline
-			T01                 & A     & 1                 & 001      & 8           \\ \hline
-			T02                 & A     & 2                 & 002      & 12,5 \\ \hline
-			T03                 & A     & 3                 & 003      & 14,5 \\ \hline
-			T04                 & A     & 4                 & 004      & 13   \\ \hline
-			T05                 & A     & 5                 & 005      & 15    \\ \hline
-			T06                 & A     & 6                 & 006      & 13    \\ \hline
-			T07                 & A     & 7                 & 007      & 17,5 \\ \hline
-			T08                 & A     & 8                 & 008      & 19,5 \\ \hline
-			T09                 & A     & 9                 & 009      & 18           \\ \hline
-			T10                 & A     & 10                & 010      & 20           \\ \hline
-			T11                 & A     & 11                & 011      & 18           \\ \hline
-			T12                 & A     & 12                & 012      & 21           \\ \hline
-			T13                 & A     & 13                & 013      & 25,5 \\ \hline
-			T14                 & A     & 14                & 014      & 27,5 \\ \hline
-			T15                 & B     & 15                & 015      & 8            \\ \hline
-			T16                 & B     & 16                & 016      & 10           \\ \hline
-			T17                 & B     & 17                & 017      & 7,5 \\ \hline
-			T18                 & B     & 18                & 018      & 9,5 \\ \hline
-			T19                 & B     & 19                & 019      & 20,5 \\ \hline
-			T20                 & B     & 20                & 020      & 22,5 \\ \hline
-			T21                 & B     & 21                & 021      & 21   \\ \hline
-			T22                 & B     & 22                & 022      & 23    \\ \hline
-			T23                 & B     & 23                & 023      & 25,5 \\ \hline
-			T24                 & B     & 24                & 024      & 27,5 \\ \hline
-			T25                 & B     & 25                & 025      & 26   \\ \hline
-			T26                 & B     & 26                & 026      & 28  \\ \hline
-			T27                 & B     & 27                & 027      & 26,5 \\ \hline
-			T28                 & B     & 28                & 028      & 29  \\ \hline
-			T29                 & C     & 29                & 029      & 8   \\ \hline
-			T30                 & C     & 30                & 030      & 10  \\ \hline
-			T31                 & C     & 31                & 031      & 8,5 \\ \hline
-			T32                 & C     & 32                & 032      & 10,5 \\ \hline
-			T33                 & C     & 33                & 033      & 15,5 \\ \hline
-			T34                 & C     & 34                & 034      & 16,5 \\ \hline
-			T35                 & C     & 35                & 035      & 15   \\ \hline
-			T36                 & C     & 36                & 036      & 17  \\ \hline
-			T37                 & C     & 37                & 037      & 22  \\ \hline
-			T38                 & C     & 38                & 038      & 27,5 \\ \hline
-			T39                 & C     & 39                & 039      & 32,5 \\ \hline
-			T40                 & C     & 40                & 040      & 35   \\ \hline
-			T41                 & C     & 41                & 041      & 39,5 \\ \hline
-			T42                 & C     & 42                & 042      & 41,5 \\ \hline
+		\begin{tabular}{lllll}
+			\toprule
+			{\textbf{PONTO DE COMUNICAÇÃO}} & {\textbf{CALHA}} & {\textbf{PORTA}} & {\textbf{Nº CABO}} & {\textbf{DIST (M)}}    \\
+			\midrule
+		T01                  & A     & 1                 & 1        & 8        \\
+		T02                  & A     & 2                 & 2        & 12.5     \\
+		T03                  & A     & 3                 & 3        & 14.5     \\
+		T04                  & A     & 4                 & 4        & 13       \\
+		T05                  & A     & 5                 & 5        & 15       \\
+		T06                  & A     & 6                 & 6        & 13       \\
+		T07                  & A     & 7                 & 7        & 17.5     \\
+		T08                  & A     & 8                 & 8        & 19.5     \\
+		T09                  & A     & 9                 & 9        & 18       \\
+		T10                  & A     & 10                & 10       & 20       \\
+		T11                  & A     & 11                & 11       & 18       \\
+		T12                  & A     & 12                & 12       & 21       \\
+		T13                  & A     & 13                & 13       & 25.5     \\
+		T14                  & A     & 14                & 14       & 27.5     \\
+		T15                  & B     & 15                & 15       & 8        \\
+		T16                  & B     & 16                & 16       & 10       \\
+		T17                  & B     & 17                & 17       & 7.5      \\
+		T18                  & B     & 18                & 18       & 9.5      \\
+		T19                  & B     & 19                & 19       & 20.5     \\
+		T20                  & B     & 20                & 20       & 22.5     \\
+		T21                  & B     & 21                & 21       & 21       \\
+		T22                  & B     & 22                & 22       & 23       \\
+		T23                  & B     & 23                & 23       & 25.5     \\
+		T24                  & B     & 24                & 24       & 27.5     \\
+		T25                  & B     & 25                & 25       & 26       \\
+		T26                  & B     & 26                & 26       & 28       \\
+		T27                  & B     & 27                & 27       & 26.5     \\
+		T28                  & B     & 28                & 28       & 29       \\
+		T29                  & C     & 29                & 29       & 8        \\
+		T30                  & C     & 30                & 30       & 10       \\
+		T31                  & C     & 31                & 31       & 8.5      \\
+		T32                  & C     & 32                & 32       & 10.5     \\
+		T33                  & C     & 33                & 33       & 15.5     \\
+		T34                  & C     & 34                & 34       & 16.5     \\
+		T35                  & C     & 35                & 35       & 15       \\
+		T36                  & C     & 36                & 36       & 17       \\
+		T37                  & C     & 37                & 37       & 22       \\
+		T38                  & C     & 38                & 38       & 27.5     \\
+		T39                  & C     & 39                & 39       & 32.5     \\
+		T40                  & C     & 40                & 40       & 35       \\
+		T41                  & C     & 41                & 41       & 39.5     \\
+		T42                  & C     & 42                & 42       & 41.5     \\
+		\bottomrule
 		\end{tabular}
 	\end{table}
 \clearpage	
 	
 	\section{Implantação}
-A figura \ref{fig5} apresenta tabela com o cronograma de implantação previsto. O cronograma já engloba eventuais atrasos, contudo a implantação deve ocorrer dentro de 4 semanas.
+A figura \ref{fig5} apresenta tabela com o cronograma de implantação previsto. O cronograma já engloba eventuais atrasos, assim a implantação deve ocorrer dentro de 4 semanas.
 		\begin{figure}[h]
 			\centering
 			
@@ -378,14 +389,24 @@ A figura \ref{fig5} apresenta tabela com o cronograma de implantação previsto.
 		\end{figure}
 	
 	\section{Plano de certificação}
-	Quais seriam as etapas para a certificação? 
-	Quais os locais e horários para execução da certificação na rede? Toda rede será certificada?
-	Como os testes seriam executados?
-	Quais relatórios de certificação serão (ou deveriam ser) entregues? 
+Este projeto foi desenvolvido observando-se as normas técnicas vigentes, em especial a NBR 14565 \cite{ref3}, visando entregar uma estrutura de alta qualidade para o cliente. Com objetivo identificar quaisquer falhas decorrentes da instalação e obter o melhor desempenho de toda a estrutura de cabeamento será realizada, na semana final de trabalho, a certificação da rede, onde serão testados cabos, conectores, tomadas, patch cords e patch panel. O cabeamento deverá atender aos parâmetros de testes primários a seguir:
+	\begin{itemize}
+	\item Wiremap - Mapa de Fios;
+	\item Atenuação de sinal;
+	\item NEXT (Near-end Crosstalk) - Diafonia Próxima;
+	\item PSNEXT (Power sum near-end crosstalk) - Diafonia próxima por soma de potências;
+	\item ELFEXT (Equal-level far-end crosstalk) - Diafonia distante de mesmo nível;
+	\item PSELFEXT(Power sum equal-level far-end crosstalk) - Diafonia distante por soma de potência de mesmo nível;
+	\item Desvio de Atraso;
+	\item Atraso de Propagação;
+	\item Perda de Retorno;
+	\item Comprimento do cabo;
+	\end{itemize}
+Toda a rede passará pelo processo de certificação e ao final será emitido relatório detalhado que será anexado à documentação a ser entregue ao cliente.
 	
 	\section{Plano de manutenção}
 	
-	Revisões periódicas na rede, emissão de certificados para novos pontos.
+	O projeto atual prevê um plano de manutenção preventiva periódica  rede, que ocorrerá ao fim de cada semestre do primeiro ano de implantação da rede e após este período ao final de cada ano, a critério do cliente.
 	
 	\subsection{Plano de expansão}
 	A empresa acaba de passar por um processo de expansão, mas tem se preparado para crescimentos futuros, por isso o projeto de rede atual já conta com pontos de comunicação sobressalentes e a própria estrutura predial já prevê uma possível ampliação para até 3 andares. A sala de equipamentos está localizada em um ponto onde será possível a criação de um backbone para esta  ampliação, sendo recomendado o uso de fibra ótica para este fim. O Rack atual já tem espaço para instalação de novos equipamentos que atendam a demanda futura.
@@ -394,44 +415,47 @@ A figura \ref{fig5} apresenta tabela com o cronograma de implantação previsto.
 	A estrutura de rede em si não apresenta grandes riscos, uma vez que os cabos de rede passam sob o piso elevado, devidamente acondicionados dentro de eletrocalhas e longe do cabeamento elétrico. A sala de Equipamentos possui portas com trancas assim como o Rack onde ficarão os equipamentos, impedindo assim o acesso não autorizado. A sala de equipamentos possui refrigeração, pois está localizada dentro da sala de Arquivos, que possui também sistema de combate a incendios. A parte elétrica conta ainda com protetores de surto e o aterramento dos equipamentos de rede é separado do aterramento do prédio em si.
 	
 	\section{Orçamento}
-	\begin{table}[h!]\footnotesize
-			\centering
+	A tabela \ref{tab3} apresenta o orçamento do projeto, realizado na data de 28 de novembro de 2019 e com validade de 30 dias.
+	\begin{table}[h!]
+		\footnotesize
+		\centering
 		\caption{Custos do Projeto}
 		\label{tab3} %com este label vc faz referencia no texto
 	%	\begin{center}
 		\renewcommand{\arraystretch}{1.5}
-		\begin{tabular}{|l|l|l|l|}
-			\hline
-			Componente                                        & Fabricante      & Preço        & Total         \\ \hline
-			Abraçadeira Nylon 2,5 x 100mm c/100 Branca        & Western         & R\$ 1,83     & R\$ 9,15      \\ \hline
-			Cabo De Rede Furukawa Sohoplus Cat6 U/utp 305m    & Furukawa        & R\$ 590,00   & R\$ 1.770,00  \\ \hline
-			Kit 10 Uni Cj Cx+tampa + 1 Tomada Rj 45 Cat.6     & Tramontina      & R\$ 144,28   & R\$ 721,40    \\ \hline
-			Patch Cord Cat6 1,5m Gigalan Furukawa vermelho    & Furukawa        & R\$ 26,90    & R\$ 1.345,00  \\ \hline
-			Patch Cord Cat6 2,5m Gigalan Furukawa vermelho    & Furukawa        & R\$ 37,90    & R\$ 758,00    \\ \hline
-			Patch Panel Cat.6 24 Posicoes                     & Furukawa        & R\$ 599,99   & R\$ 1.199,98  \\ \hline
-			Rack 44 U                                         & Mundo dos Racks & R\$ 1.673,76 & R\$ 1.673,76  \\ \hline
-			Régua tomadasRegua Rack 19" Com 12 Tomadas Bivolt & Ipec            & R\$ 33,90    & R\$ 33,90     \\ \hline
-			Switch 48 portas                                  & HP              & R\$ 2.535,90 & R\$ 2.535,90  \\ \hline
-			Eletrocalha 50x50 3m                              & Prime Metal     & R\$ 33,21    & R\$ 2.092,23  \\ \hline
-			Eletrocalha Curva Horiz 90 50x50                  & Prime Metal     & R\$ 18,15    & R\$ 145,2     \\ \hline
-			Eletrocalha Te 90 50x50                           & Prime Metal     & R\$ 23,48    & R\$ 93,92     \\ \hline
-			Eletroduto Em Pvc c/ 3 Metros                     & Tigre           & R\$ 12,99    & R\$ 90,93     \\ \hline
-			\multicolumn{3}{|l|}{TOTAL GERAL}                                                  & R\$ 12.469,37 \\ \hline
-		\end{tabular}
-%	\end{center}
+			\begin{tabular}{lllll}
+				\toprule
+				{\textbf{COMPONENTE/ SERVIÇO}}                   & {\textbf{EMPRESA}}        & {\textbf{QTDE}} & {\textbf{PREÇO}} & {\textbf{TOTAL}}   \\
+				\midrule
+				Abraçadeira Nylon 2,5 x 100mm c/100   & Western        & 5          & 1,83     & 9,15     \\
+				Cabo De Rede Cat6 U/utp 305m          & Furukawa       & 3          & 590,00   & 1.770,00 \\
+				Conector Rj45 Cat6 (pacote C/50)      & Furukawa       & 2          & 190,76   & 381,52   \\
+				Eletrocalha 50x50 3m                  & Cemar          & 63         & 33,21    & 2.092,23 \\
+				Eletrocalha Curva Horiz 90 50x50      & Cemar          & 8          & 18,15    & 145,20   \\
+				Eletrocalha Te 90 50x50               & Cemar          & 4          & 23,48    & 93,92    \\
+				Eletroduto Em Pvc c/ 3 Metros         & Tigre          & 7          & 12,99    & 90,93    \\
+				Kit Cx+tampa+Tomada Rj45 Cat.6 10u    & Tramontina     & 5          & 144,28   & 721,40   \\
+				Patch Cord Cat6 1,5m Gigalan vermelho & Furukawa       & 50         & 26,90    & 1.345,00 \\
+				Patch Cord Cat6 2,5m Gigalan vermelho & Furukawa       & 20         & 37,90    & 758,00   \\
+				Patch Panel Cat.6 48 Posições         & Itcomtech      & 1          & 435,00   & 435,00   \\
+				Rack para Servidor Fechado 44U        & Inforack       & 1          & 1.673,76 & 1.673,76 \\
+				Régua tomadas c/ 12 Tomadas Bivolt    & Ipec           & 1          & 33,90    & 33,90    \\
+				Roteador AC DIR-815                   & D-Link         & 2          & 155      & 310,00   \\
+				Switch 48 portas                      & HP             & 1          & 2.535,90 & 2.535,90 \\
+				Instalação Link de Internet           & Copel          & 1          & 135      & 135,00   \\
+				Instalação piso e eletrocalhas        & BH Construtora & 1          & 1.350,90 & 1.350,90 \\
+				Montagem do Rack e Cabeamento         & VyperNET       & 1          & 1.500,00 & 1.500,00 \\
+				Certificação da rede                  & Certifik       & 1          & 1.280,00 & 1.280,00 \\
+				\bottomrule
+				VALOR TOTAL                           &                &            &          & 16661,81\\
+				\bottomrule
+			\end{tabular}
 	\end{table}
 	
 	\section{Recomendações}
-	Observações e recomendações para o cliente.
+	Recomenda-se manter o acesso à sala de equipamentos restrito exclusivamente aos colaboradores responsáveis pelos equipamentos de TI. Estes mesmos colaboradores devem relatar qualquer anormalidades encontradas na sala e nos equipamentos, bem como avaliar a necessidade de limpeza do local.
 	
 	\section{Referências bibliográficas}
-	Utilize o mendley, o jabref ou diretamente o bibtex para gerenciar suas referências biliográficas. As referências são criadas automaticamente de acordo com o uso no texto.
-	
-	Exemplo: Redes de computadores, segundo \cite{t2013} é considerada..... Já \cite{kurose2010} apresenta uma versão...
-	
-	Analisando os pressupostos de \cite{ref3} e \cite{ref4} concluimos que....
-	
-	
 	\renewcommand\refname{} %%Referências bibliográficas}  
 	\bibliographystyle{ieeetr}
 	\bibliography{referencias}  
